@@ -18,7 +18,7 @@
         position: relative;
         padding-left: 10px;
         z-index: 2;
-        @include before_circle;
+        @include before_circle (-25%);
     }
     &__link {
         color: #000;
