@@ -1,0 +1,87 @@
+.myskills {
+    padding-top: 120px;
+    &__title {
+        text-align: center;
+        position: relative;
+        @include before_circle (-25%);
+        &:before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__items {
+        margin: 60px 10px 0 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-auto-rows: 270px;
+        gap: 13px;
+    }
+    &__item {
+        padding: 30px 30px;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        position: relative;
+        &-icon {
+            position: absolute;
+        }
+        &-title {
+            margin-top: 85px;
+            line-height: 14px;
+        }
+        &-descr {
+            margin-top: 15px;
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+        }
+    }
+    &__stats {
+        padding-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, 70px);
+        gap: 30px 45px;
+    }
+    &__index {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 36px;
+        grid-auto-rows: 14px;
+        row-gap: 20px;
+        position: relative;
+        z-index: -1;
+        &-title {
+            position: relative;
+            padding-left: 14px;
+            z-index: 2;
+            @include before_circle (-23%);
+        }
+        &-mark {
+            font-size: 14px;
+            line-height: 21px;
+            text-align: right;
+            z-index: -1;
+        }
+        &-sb {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+            background: $main-color;
+            border-radius: 4px;
+            z-index: 5;
+            top: 15px;
+            &-full {
+                // position: absolute;
+                grid-column: 1 / 3;
+                grid-row: 2 / 3;
+                background: #E8E4DE;
+                border-radius: 4px;
+                width: 100%;
+                z-index: 1;
+                top: 50px;
+            }
+        }
+    }
+}

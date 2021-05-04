@@ -15,7 +15,7 @@
             margin: 0 0 20px 0;
         }
     }
-    &__label {
+    &__title {
         position: relative;
         padding-left: 10px;
         z-index: 2;
@@ -49,5 +49,8 @@
         font-size: 12px;
         line-height: 18px;
         color: #000000;
+        &-title {
+            margin-bottom: 6px;
+        }
     }
 }
