@@ -39,6 +39,26 @@
             justify-content: center;
         }
     }
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: center;
+            .horizonal, .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+    }
+    .contacts {
+        &__wrapper {
+            padding: 0 20px;
+            grid-template-columns: 400px 540px;
+        }
+        &__form {
+            grid-template: 45px 190px 45px / repeat(2, 260px);
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -76,7 +96,19 @@
             grid-template-columns: repeat(2, 270px);
         }
         &__stats {
-            grid-template-columns: repeat(2,300px);
+            grid-template-columns: repeat(2, 300px);
+        }
+    }
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+        &__photo {
+            display: none;
+        }
+        &__form {
+            grid-template: 45px 190px 45px / repeat(2, 280px);
         }
     }
 }
@@ -141,6 +173,21 @@
             grid-template-columns: 1fr;
         }
     }
+    .portfolio {
+        padding-top: 40px;
+        .divider {
+            margin-top: 15px;
+        }
+        &__wrapper {
+            margin-top: 40px;
+        }
+    }
+    .contacts {
+        padding-top: 40px;
+        &__form {
+            grid-template: 45px 190px 45px / repeat(2, 240px);
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -202,6 +249,55 @@
         }
         &__item {
             padding: 30px;
+        }
+    }
+    .portfolio {
+        &__subtitle {
+            line-height: 36px;
+            margin-top: 20px;
+        }
+    }
+    .contacts {
+        &__subtitle {
+            line-height: 36px;
+            margin-top: 20px;
+        }
+        .divider {
+            margin-top: 15px;
+        }
+        &__wrapper {
+            padding: 0;
+        }
+        &__form {
+            display: block;
+            input {
+                height: 45px;
+                margin-bottom: 30px;
+            }
+            textarea {
+                height: 143px;
+            }
+        }
+        &__triggers {
+            margin-top: 20px;
+            grid-template-columns: 1fr;
+            gap: 20px 0;
+            justify-content: center;
+        }
+        &__policy {
+            grid-row: 1 / 2;
+            padding: 0 60px;
+            justify-content: center;
+            input {
+                margin: 0 10px 0 0;
+            }
+            span {
+                line-height: 18px;
+            }
+        }
+        &__btn {
+            margin: 0 auto;
+            width: 220px;
         }
     }
 }
