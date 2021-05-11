@@ -16,3 +16,14 @@ const counters = document.querySelectorAll('.myskills__index-mark'),
 counters.forEach( (item, i) => {
     lines[i].style.width = item.innerHTML;
 });
+
+const links = document.querySelectorAll('.promo__link');
+
+links.forEach(item => {
+    item.addEventListener('mouseover', (e) => {
+        e.target.classList.add('btn');
+    });
+    item.addEventListener('mouseout', (e) => {
+        e.target.classList.remove('btn');
+    });
+});

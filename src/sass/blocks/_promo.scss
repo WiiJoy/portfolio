@@ -10,7 +10,7 @@
     &__btns {
         margin-top: 25px;
         display: flex;
-        width: 250px;
+        width: 280px;
         align-items: center;
         justify-content: space-between;
     }
@@ -21,10 +21,19 @@
         @include before_circle (-25%);
     }
     &__link {
-        color: #000;
+        display: block;
+        width: 135px;
+        height: 45px;
+        text-align: center;
+        color: $main-color;
         font-weight: bold;
+        padding: 12px 25px;
+        transition: all .6s;
+        text-shadow: #000 0 0 3px;
         &:hover {
             color: #000;
+            text-decoration: none;
+            text-shadow: none;
         }
     }
 }
