@@ -1,13 +1,16 @@
 .sidepanel {
     position: fixed;
-    top: 230px;
     left: 50px;
     z-index: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 305px;
+    &__wrapper {
+        position: absolute;
+        top: 230px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 305px;
+    }
     &__divider {
         width: 2px;
         height: 70px;
@@ -31,5 +34,10 @@
             width: auto;
             transform: rotate(-90deg);
         }
+    }
+    &__back {
+        background-color: white;
+        height: 100vh;
+        width: 25px;
     }
 }

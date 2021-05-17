@@ -32,6 +32,9 @@
             max-width: 30px;
             max-height: 30px;
         }
+        &:hover {
+            text-decoration: none;
+        }
     }
     &__form {
         margin-top: 30px;
@@ -87,9 +90,10 @@
         }
     }
     &__btn {
-        border: none;
+        display: block;
         line-height: 21px;
         font-size: 14px;
         font-weight: bold;
+        transition: all .6s;
     }
 }

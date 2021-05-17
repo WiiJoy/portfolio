@@ -17,13 +17,18 @@ counters.forEach( (item, i) => {
     lines[i].style.width = item.innerHTML;
 });
 
-const links = document.querySelectorAll('.promo__link');
+function toogleActiveBtn(link) {
+    link.forEach(item => {
+        item.addEventListener('mouseover', (e) => {
+            e.target.classList.add('btn_active');
+        });
+        item.addEventListener('mouseout', (e) => {
+            e.target.classList.remove('btn_active');
+        });
+    });
+}
+const promoLinks = document.querySelectorAll('.promo__link'),
+      contactBtn = document.querySelectorAll('.contacts__btn');
 
-links.forEach(item => {
-    item.addEventListener('mouseover', (e) => {
-        e.target.classList.add('btn');
-    });
-    item.addEventListener('mouseout', (e) => {
-        e.target.classList.remove('btn');
-    });
-});
+toogleActiveBtn(promoLinks);
+toogleActiveBtn(contactBtn);

@@ -1,11 +1,12 @@
 .promo {
     min-height: 100vh;
     position: relative;
-    background-color: #5190ee;
+    background: url('../img/bg/main.jpg') no-repeat center / cover;
     padding-top: 205px;
     &__title {
         width: 535px;
         margin-top: 10px;
+        color: white;
     }
     &__btns {
         margin-top: 25px;
@@ -18,18 +19,20 @@
         position: relative;
         padding-left: 10px;
         z-index: 2;
+        color: $main-color;
+        text-shadow: #000 0 0 3px;
         @include before_circle (-25%);
+        &:before {
+            opacity: .5;
+        }
     }
     &__link {
         display: block;
         width: 135px;
-        height: 45px;
         text-align: center;
         color: $main-color;
         font-weight: bold;
-        padding: 12px 25px;
         transition: all .6s;
-        text-shadow: #000 0 0 3px;
         &:hover {
             color: #000;
             text-decoration: none;
